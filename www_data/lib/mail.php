@@ -15,10 +15,10 @@ function mail_init(){
 
 	$mail->isSMTP();
 	$mail->Host       = SMTP_HOST;
-	$mail->SMTPAuth   = true;
+	$mail->SMTPAuth   = false;
 	$mail->Username   = SMTP_MAIL;
 	$mail->Password   = SMTP_PASSWORD;
-	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+	$mail->SMTPSecure = false;
 	$mail->Port       = SMTP_PORT;
 	$mail->CharSet    = 'UTF-8';
 
