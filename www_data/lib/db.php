@@ -568,4 +568,3 @@ function db_select_compte_avec_totp($db) {
 
 	return $statement->fetchAll(PDO::FETCH_NUM);
 }
-
