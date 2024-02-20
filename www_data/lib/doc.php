@@ -7,7 +7,7 @@
 ** https://github.com/jean-io/moncycle.app
 */
 
-use Fpdf\Fpdf;
+use Mpdf\Mpdf;
 
 function doc_preparation_jours_pour_affichage($data, $methode){
 	$cycle = [];
@@ -87,7 +87,7 @@ function doc_cycle_vers_csv ($out, $cycle, $methode) {
 }
 
 function doc_cycle_bill_vers_pdf ($cycle, $methode, $nom) {
-		$pdf = new Fpdf('P','mm','A4');
+		$pdf = new Mpdf('P','mm','A4');
 		$pdf->SetTitle('bill_cycle_'. date_humain(new Datetime($cycle[0]["date_obs"]), '_') . '.pdf');
 		$pdf->AddPage();
 		$pdf->SetFont('Courier','B',12);
@@ -351,7 +351,7 @@ function doc_cycle_fc_vers_pdf($cycle, $nom) {
 	$h_end_date = date_humain(new Datetime(end($cycle)["date_obs"]));
 	$h_current_date = date_humain(new Datetime());
 
-	$pdf = new Fpdf('L','mm','A3');
+	$pdf = new Mpdf('L','mm','A3');
 	$pdf->SetMargins($left_margin, $top_margin);
 	$pdf->SetTitle('bill_cycle_test.pdf');
 

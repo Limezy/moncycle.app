@@ -5,7 +5,7 @@
 	"license": "Creative Commons - CC BY-NC-SA",
 	"require": {
 		"phpmailer/phpmailer": "6.*",
-		"fpdf/fpdf" : "1.*",
+		"mpdf/mpdf" : "8.*",
 		"components/jquery" : "3.*",
 		"swagger-api/swagger-ui" : "5.*",
 		"spomky-labs/otphp" : "11.*",
