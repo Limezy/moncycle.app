@@ -105,5 +105,3 @@ function mail_body_relance ($nom, $mail1) {
 	</div>
 	HTML;
 }
-
-
